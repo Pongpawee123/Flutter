@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipes/Model/recipe.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:recipes/Model/ingredient.dart';
 
 class RecipeDetail extends StatefulWidget {
@@ -33,19 +34,17 @@ class _RecipeDetailState extends State<RecipeDetail> {
             const SizedBox(height: 14.0),
             Text(
               widget.recipe.imgLabel,
-              style: const TextStyle(
+              style: GoogleFonts.kanit(
                 fontSize: 15.0,
                 fontWeight: FontWeight.w700,
-                fontFamily: 'Palatino',
               ),
             ),
             const SizedBox(height: 14.0),
             Text(
               widget.recipe.description,
-              style: const TextStyle(
+              style: GoogleFonts.kanit(
                 fontSize: 15.0,
                 fontWeight: FontWeight.w700,
-                fontFamily: 'Palatino',
               ),
             ),
 
@@ -57,7 +56,7 @@ class _RecipeDetailState extends State<RecipeDetail> {
                   final adjustedQuantity = widget.recipe.ingredient[index].quantity * sliderVal;
                   return Text(
                     '${adjustedQuantity} ${ingredient.unit} ${ingredient.name}',
-                    style: const TextStyle(
+                    style: GoogleFonts.kanit(
                       fontSize: 15.0,
                     ),
                   );
